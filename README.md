@@ -7,31 +7,31 @@ classDiagram
     direction TB
 
     class Profissional {
-        +Long id
-        +String nome
-        +LocalDate dataAdmissao
-        +Boolean isVideomaker
-        +Integer cargaHorariaSemanal
-        +List~Evento~ eventos
+        -Long id
+        -String nome
+        -LocalDate dataAdmissao
+        -Boolean isVideomaker
+        -Integer cargaHorariaSemanal
+        -List~Evento~ eventos
     }
 
     class Evento {
-        +Long id
-        +String titulo
-        +LocalDateTime dataHoraInicio
-        +Boolean requerDeslocamento
-        +Double orcamentoPrevisto
-        +List~Profissional~ profissionais
-        +List~Equipamento~ equipamentos
+        -Long id
+        -String titulo
+        -LocalDateTime dataHoraInicio
+        -Boolean requerDeslocamento
+        -Double orcamentoPrevisto
+        -List~Profissional~ profissionais
+        -List~Equipamento~ equipamentos
     }
 
     class Equipamento {
-        +Long id
-        +String modelo
-        +LocalDate dataAquisicao
-        +Boolean disponivel
-        +Integer pesoGramas
-        +List~Evento~ eventos
+        -Long id
+        -String modelo
+        -LocalDate dataAquisicao
+        -Boolean disponivel
+        -Integer pesoGramas
+        -List~Evento~ eventos
     }
 
     %% Relacionamentos N:N mapeados nas listas
