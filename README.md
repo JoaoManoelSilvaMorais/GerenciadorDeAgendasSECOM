@@ -34,7 +34,7 @@ classDiagram
         +List~Evento~ eventos
     }
 
-    %% Relacionamentos bidirecionais N:N explícitos
-    Evento "*" <--> "*" Profissional : possui / atua_em
-    Evento "*" <--> "*" Equipamento : aloca / utilizado_em
+    %% Relacionamentos N:N mapeados nas listas
+    Evento "*" -- "*" Profissional : possui / atua_em
+    Evento "*" -- "*" Equipamento : aloca / utilizado_em
 ```
