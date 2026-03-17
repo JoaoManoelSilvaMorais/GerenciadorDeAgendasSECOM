@@ -12,6 +12,7 @@ classDiagram
         +LocalDate dataAdmissao
         +Boolean isVideomaker
         +Integer cargaHorariaSemanal
+        +List~Evento~ eventos
     }
 
     class Evento {
@@ -20,6 +21,8 @@ classDiagram
         +LocalDateTime dataHoraInicio
         +Boolean requerDeslocamento
         +Double orcamentoPrevisto
+        +List~Profissional~ profissionais
+        +List~Equipamento~ equipamentos
     }
 
     class Equipamento {
@@ -28,9 +31,10 @@ classDiagram
         +LocalDate dataAquisicao
         +Boolean disponivel
         +Integer pesoGramas
+        +List~Evento~ eventos
     }
 
-    %% Relacionamentos mapeados para as próximas etapas (OBS do escopo)
-    Evento "1" --> "*" Profissional : aloca
-    Evento "1" --> "*" Equipamento : utiliza
+    %% Relacionamentos bidirecionais N:N explícitos
+    Evento "*" <--> "*" Profissional : possui / atua_em
+    Evento "*" <--> "*" Equipamento : aloca / utilizado_em
 ```
