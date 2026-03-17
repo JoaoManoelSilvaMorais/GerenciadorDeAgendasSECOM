@@ -2,7 +2,7 @@
 Um gerenciador de agenda de profissionais de comunicação, um projeto simples para a aprovação na matéria de desenvolvimento web
 
 
-classDiagram
+```classDiagram
     direction TB
 
     class Profissional {
@@ -32,3 +32,4 @@ classDiagram
     %% Relacionamentos mapeados para as próximas etapas (OBS do escopo)
     Evento "1" --> "*" Profissional : aloca
     Evento "1" --> "*" Equipamento : utiliza
+```
