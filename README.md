@@ -19,6 +19,7 @@ classDiagram
         -Long id
         -String titulo
         -LocalDateTime dataHoraInicio
+        -LocalDateTime dataHoraFinal
         -Boolean requerDeslocamento
         -Double orcamentoPrevisto
         -List~Profissional~ profissionais
