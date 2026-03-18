@@ -21,7 +21,6 @@ classDiagram
         -LocalDateTime dataHoraInicio
         -LocalDateTime dataHoraFinal
         -Boolean requerDeslocamento
-        -Double orcamentoPrevisto
         -List~Profissional~ profissionais
         -List~Equipamento~ equipamentos
     }
